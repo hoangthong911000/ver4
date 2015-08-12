@@ -1,0 +1,32 @@
+extends layoutadmin
+block tieude
+	|Thêm Sản Phẩm
+block content
+	form#registerForm.form-horizontal(action='', method='post')
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1.title
+				| Thêm Sản Phẩm
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1
+				.form-group
+					.col-sm-6
+						input.form-control(type='text', name='tensp', placeholder='Tên Sản Phẩm')
+					.col-sm-6
+						input.form-control(type='text', name='gia', placeholder='Giá Sản Phẩm')
+		.row(style='margin-top:30px')
+			.col-md-10.col-md-offset-1.title
+				.form-group
+					.col-sm-6
+						input.form-control(type='text', name='FullName', placeholder='Giới Thiệu')
+				.form-group
+					.col-sm-6
+						input.form-control(type='file', name='hinhlon', placeholder='Hình Lớn')
+					.col-sm-6
+						input.form-control.datepicker(type='file', name='hinnho', placeholder='Hình Nhỏ')
+				.form-group
+					.col-sm-6(style='margin-top:40px')
+						button.btn.btn-success.pull-right(type='submit')
+							i.fa.fa-check
+							|  Thêm
+				a(href='/admin/sanpham')
+					i.fa.fa-home.fa-lg
